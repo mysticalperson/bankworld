@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align:center; background-color:Khaki;">
+<h2>Application Form</h2>
+<form action="form" method="post">
+  {% csrf_token %}
+   <input type="text" name="name" placeholder="Enter your Name"><br><br>
+    DOB<input type="date" name="dob" placeholder="Enter your DOB"><br><br>
+    <input type="number" name="age" placeholder="Enter your Age"><br><br>
+      Gender<input type="radio" name="gender">Male
+  <input type="radio" name="gender">Female<br><br>
+    <input type="number" name="phone number" placeholder="Enter your Phone number"><br><br>
+    <input type="email" name="email" placeholder="Enter your Email"><br><br>
+    <input type="text" name="address" placeholder="Enter your Address"><br><br>
+  Districts<select>
+    <option value="">Select District</option>
+  <option value="Thrissur">Thrissur</option>
+  <option value="Malappuram">Malappuram</option>
+    <option value="Palakkad">Palakkad</option>
+    <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+    <option value="Kannur">Kannur</option>
+    <option value="Ernakulam">Ernakulam</option>
+    </select><br><br>
+
+
+    Branch<select>
+    <option value="">Select Branch</option>
+  <option value="Guruvayoor">Guruvayoor</option>
+  <option value="Kechery">Kechery</option>
+  <option value="Chelakkara">Chelakkara</option>
+  <option value="Kunnamkulam">Kunnamkulam</option>
+
+  <option value="Valancheri">Valancheri</option>
+  <option value="Edappal">Edappal</option>
+  <option value="Manjeri">Manjeri</option>
+  <option value="Perinthalmanna">Perinthalmanna</option>
+  <option value="Ponnani">Ponnani</option>
+
+  <option value="Alathur">Alathur</option>
+  <option value="Chittoor">Chittoor</option>
+  <option value="Kongad">Kongad</option>
+  <option value="Koppam">Koppam</option>
+  <option value="Nemmara">Nemmara</option>
+
+  <option value="Balaramapuram">Balaramapuram</option>
+  <option value="Chirayinkeezhu">Chirayinkeezhu</option>
+  <option value="Chowara">Chowara</option>
+  <option value="Kochuveli">Kochuveli</option>
+
+<option value="Azhikode">Azhikode</option>
+  <option value="Iritty">Iritty</option>
+  <option value="Payyannur">Payyannur</option>
+  <option value="Tellicherry">Tellicherry</option>
+
+<option value="Palarivattam">Palarivattam</option>
+  <option value="Ambalamedu">Ambalamedu</option>
+  <option value="Kaloor">Kaloor</option>
+  <option value="Tripunithara">Tripunithara</option>
+  <option value="Elamakkara">Elamakkara</option>
+
+
+
+</select><br><br>
+  Account Type<select>
+    <option value="">Select Type</option>
+  <option value="Saving Account">Saving Account</option>
+  <option value="Current Account">Current Account</option>
+</select><br><br>
+  Materials Provide<input type="checkbox" name="materials">Debit Card
+  <input type="checkbox">Credit Card
+  <input type="checkbox">Cheque Book
+  <br><br>
+   <input type="submit">
+<!--  <div class="btn-group"></div>-->
+    <a href="{% url 'credentials:logout' %}" class="btn btn-secondary">Logout</a>
+
+
+
+</form>
+
+</body>
+</html>
